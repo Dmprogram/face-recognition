@@ -1,0 +1,12 @@
+.Tilt {
+  background: linear-gradient(
+    90deg,
+    rgba(27, 78, 103, 1) 0%,
+    rgba(29, 77, 135, 1) 51%,
+    rgba(135, 29, 69, 1) 100%
+  );
+}
+
+.Tilt-inner {
+  text-align: center;
+}

@@ -60,7 +60,7 @@ module.exports = {
       },
       //Loading images
       {
-        test: /\.(png|jpg|jpeg|gif|ico)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
       },
       {
