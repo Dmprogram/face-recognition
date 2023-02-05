@@ -45,6 +45,7 @@
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^10.0.1",
+    "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^2.7.2",
     "node-sass": "^8.0.0",
     "sass-loader": "^13.2.0",
@@ -56,11 +57,14 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "clarifai": "^2.9.1",
     "core-js": "^3.27.1",
     "particles-bg": "^2.5.5",
+    "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-parallax-tilt": "^1.7.89",
+    "react-scripts": "4.0.2",
     "react-tsparticles": "^2.8.0",
     "tachyons": "^4.12.0",
     "tsparticles": "^2.8.0"

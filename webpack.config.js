@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const webpack = require("webpack");
 
 const isDev = process.env.NODE_ENV === "development";
 const isProd = !isDev;
@@ -16,6 +17,10 @@ const getPlugins = () => {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "public", "index.html"),
       filename: "index.html",
+    }),
+
+    new webpack.ProvidePlugin({
+      process: "process/browser",
     }),
     new FileManagerPlugin({
       events: {
