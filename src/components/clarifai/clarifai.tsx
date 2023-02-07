@@ -1,3 +1,5 @@
+import calculateFaceLocation from "./faceLocation";
+
 const Clarifai = async (imageUrl: string) => {
   const USER_ID = "lkxbxjg5gug3";
 
@@ -32,19 +34,23 @@ const Clarifai = async (imageUrl: string) => {
     body: raw,
   };
 
-  await fetch(
+  const res = await fetch(
     "https://api.clarifai.com/v2/models/" +
       MODEL_ID +
       "/versions/" +
       MODEL_VERSION_ID +
       "/outputs",
     requestOptions
-  )
-    .then((response) => response.json())
-    .then((result) =>
-      console.log(result.outputs[0].data.regions[0].region_info.bounding_box)
-    )
-    .catch((error) => console.log("error", error));
+  );
+  if (!res.ok) {
+    throw new Error(`Could not fetch clarifai API, received ${res.status}`);
+  }
+  const result = await res.json();
+  return calculateFaceLocation(result);
 };
 
 export default Clarifai;
+
+// .then((response) => response.json())
+//   .then((result) => calculateFaceLocation(result))
+//   .catch((error) => console.log("error", error));

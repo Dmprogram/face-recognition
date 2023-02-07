@@ -11,12 +11,19 @@ import Clarifai from "./components/clarifai/clarifai";
 const App = () => {
   const [imageUrl, setImageUrl] = useState<string>("");
   const [input, setInput] = useState<string>("");
+
+  const [box, setBox] = useState<Box>();
+
   const onInputChange = (ev: React.ChangeEvent<HTMLInputElement>): void => {
     setInput(ev.target.value);
   };
-  const onButtonSubmit = (): void => {
+  const onButtonSubmit = async () => {
+    if (input === "") {
+      return;
+    }
     setImageUrl(input);
-    Clarifai(input);
+    const faceLocation = await Clarifai(input);
+    setBox(faceLocation);
   };
   return (
     <div className="App">
@@ -28,7 +35,7 @@ const App = () => {
         onInputChange={onInputChange}
         onButtonSubmit={onButtonSubmit}
       />
-      <FaceRecognition imageUrl={imageUrl} />
+      <FaceRecognition box={box} imageUrl={imageUrl} />
     </div>
   );
 };
