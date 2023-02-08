@@ -1,3 +1,4 @@
+import "./types";
 const calculateFaceLocation = (data: Api): Box => {
   const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
 

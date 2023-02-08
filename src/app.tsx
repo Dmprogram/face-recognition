@@ -7,12 +7,14 @@ import Rank from "./components/rank/rank";
 import Particle from "./components/particles/particle";
 import "./app.css";
 import Clarifai from "./components/clarifai/clarifai";
+import "./components/clarifai/types";
+import ErrorBoundry from "./components/ErrorBoundry/ErrorBoundry";
 
 const App = () => {
   const [imageUrl, setImageUrl] = useState<string>("");
   const [input, setInput] = useState<string>("");
-
-  const [box, setBox] = useState<Box>();
+  const [error, setError] = useState(false);
+  const [box, setBox] = useState<Box | null>(null);
 
   const onInputChange = (ev: React.ChangeEvent<HTMLInputElement>): void => {
     setInput(ev.target.value);
@@ -22,7 +24,13 @@ const App = () => {
       return;
     }
     setImageUrl(input);
+    setBox(null);
     const faceLocation = await Clarifai(input);
+    if (faceLocation === null) {
+      setError(true);
+    } else {
+      setError(false);
+    }
     setBox(faceLocation);
   };
   return (
@@ -35,6 +43,7 @@ const App = () => {
         onInputChange={onInputChange}
         onButtonSubmit={onButtonSubmit}
       />
+      <ErrorBoundry status={error} />
       <FaceRecognition box={box} imageUrl={imageUrl} />
     </div>
   );

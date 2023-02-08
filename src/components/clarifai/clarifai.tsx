@@ -43,14 +43,10 @@ const Clarifai = async (imageUrl: string) => {
     requestOptions
   );
   if (!res.ok) {
-    throw new Error(`Could not fetch clarifai API, received ${res.status}`);
+    return null;
   }
   const result = await res.json();
   return calculateFaceLocation(result);
 };
 
 export default Clarifai;
-
-// .then((response) => response.json())
-//   .then((result) => calculateFaceLocation(result))
-//   .catch((error) => console.log("error", error));
