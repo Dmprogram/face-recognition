@@ -12,7 +12,7 @@ const App = () => {
       <Particle />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Signin />} />
+          <Route path="/face-recognition" element={<Signin />} />
           <Route path="/login" element={<MainPage />} />
           <Route path="/register" element={<Register />} />
         </Routes>

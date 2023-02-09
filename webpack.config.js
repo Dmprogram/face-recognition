@@ -25,7 +25,7 @@ const getPlugins = () => {
     new FileManagerPlugin({
       events: {
         onStart: {
-          delete: ["dist"],
+          delete: ["build"],
         },
       },
     }),
@@ -44,7 +44,7 @@ module.exports = {
   mode: isProd ? "production" : isDev && "development",
   entry: path.resolve(__dirname, "src", "index.tsx"),
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "build"),
     filename: "index.[contenthash:8].js",
     sourceMapFilename: "index.[contenthash:8].js.map",
     assetModuleFilename: path.join("images", "[name].[contenthash][ext]"),
