@@ -3,7 +3,6 @@ import Navigation from "../navigation/navigation";
 import FaceRecognition from "../faceRecognition/faceRecognition";
 import Logo from "../logo/logo";
 import ImageLinkForm from "../imageLinkForm/imageLinkForm";
-import Rank from "..//rank/rank";
 import Clarifai from "../clarifai/clarifai";
 
 import ErrorBoundry from "../ErrorBoundry/ErrorBoundry";
@@ -22,6 +21,7 @@ const MainPage = () => {
     }
     setImageUrl(input);
     setBox(null);
+    setError(false);
     const faceLocation = await Clarifai(input);
     if (faceLocation === null) {
       setError(true);
@@ -34,7 +34,6 @@ const MainPage = () => {
     <div>
       <Navigation />
       <Logo />
-      <Rank />
       <ImageLinkForm
         onInputChange={onInputChange}
         onButtonSubmit={onButtonSubmit}

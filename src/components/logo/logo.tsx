@@ -4,7 +4,7 @@ import brain from "./brain.png";
 import "./logo.css";
 const Logo = () => {
   return (
-    <div className="ma4 mt0">
+    <div className="content">
       <Tilt
         className="Tilt br2 shadow-2"
         style={{

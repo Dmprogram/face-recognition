@@ -46,8 +46,11 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.[contenthash:8].js",
+    sourceMapFilename: "index.[contenthash:8].js.map",
     assetModuleFilename: path.join("images", "[name].[contenthash][ext]"),
   },
+  devtool: "source-map",
+
   plugins: getPlugins(),
 
   module: {

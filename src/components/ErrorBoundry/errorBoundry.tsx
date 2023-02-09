@@ -15,7 +15,7 @@ const ErrorBoundry = ({ status }: ErrorProps): ReactElement => {
       </div>
     );
   }
-  return <div className="boundry"></div>;
+  return <div></div>;
 };
 
 export default ErrorBoundry;
