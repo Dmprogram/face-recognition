@@ -1,4 +1,5 @@
 {
+  "homepage": "https://Dmprogram.github.io/face-recognition",
   "name": "face-recognition",
   "version": "1.0.0",
   "description": "App that can recognize face in the picture",
@@ -40,6 +41,7 @@
     "css-loader": "^6.7.3",
     "file-loader": "^6.2.0",
     "filemanager-webpack-plugin": "^8.0.0",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.0",
     "image-minimizer-webpack-plugin": "^3.8.1",
     "imagemin": "^8.0.1",
@@ -62,7 +64,6 @@
   "dependencies": {
     "clarifai": "^2.9.1",
     "core-js": "^3.27.1",
-    "gh-pages": "^5.0.0",
     "particles-bg": "^2.5.5",
     "process": "^0.11.10",
     "react": "^18.2.0",
