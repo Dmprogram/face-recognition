@@ -18894,10 +18894,11 @@ var MainPage = function MainPage() {
 
 
 
+
 var App = function App() {
   return /*#__PURE__*/react.createElement("div", {
     className: "App"
-  }, /*#__PURE__*/react.createElement(particle, null), /*#__PURE__*/react.createElement(BrowserRouter, null, /*#__PURE__*/react.createElement(Routes, null, /*#__PURE__*/react.createElement(Route, {
+  }, /*#__PURE__*/react.createElement(particle, null), /*#__PURE__*/react.createElement(navigation, null), /*#__PURE__*/react.createElement(BrowserRouter, null, /*#__PURE__*/react.createElement(Routes, null, /*#__PURE__*/react.createElement(Route, {
     path: "/",
     element: /*#__PURE__*/react.createElement(signin, null)
   }), /*#__PURE__*/react.createElement(Route, {
@@ -18921,4 +18922,4 @@ root.render( /*#__PURE__*/react.createElement(app, null));
 }();
 /******/ })()
 ;
-//# sourceMappingURL=index.480d790f.js.map
+//# sourceMappingURL=index.4f17ac1d.js.map
