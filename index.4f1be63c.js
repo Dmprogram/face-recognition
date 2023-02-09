@@ -18622,7 +18622,7 @@ var Navigation = function Navigation() {
       justifyContent: "flex-end"
     }
   }, /*#__PURE__*/react.createElement(Link, {
-    to: "/"
+    to: "/face-recognition"
   }, /*#__PURE__*/react.createElement("p", {
     className: "f3 link dim black underline pa3 pointer"
   }, "Sign Out")));
@@ -18921,4 +18921,4 @@ root.render( /*#__PURE__*/react.createElement(app, null));
 }();
 /******/ })()
 ;
-//# sourceMappingURL=index.23d069e8.js.map
+//# sourceMappingURL=index.ba0f2761.js.map
