@@ -18894,12 +18894,11 @@ var MainPage = function MainPage() {
 
 
 
-
 var App = function App() {
   return /*#__PURE__*/react.createElement("div", {
     className: "App"
-  }, /*#__PURE__*/react.createElement(particle, null), /*#__PURE__*/react.createElement(logo, null), /*#__PURE__*/react.createElement(BrowserRouter, null, /*#__PURE__*/react.createElement(Routes, null, /*#__PURE__*/react.createElement(Route, {
-    path: "/",
+  }, /*#__PURE__*/react.createElement(particle, null), /*#__PURE__*/react.createElement(BrowserRouter, null, /*#__PURE__*/react.createElement(Routes, null, /*#__PURE__*/react.createElement(Route, {
+    path: "/face-recognition",
     element: /*#__PURE__*/react.createElement(signin, null)
   }), /*#__PURE__*/react.createElement(Route, {
     path: "/login",
@@ -18922,4 +18921,4 @@ root.render( /*#__PURE__*/react.createElement(app, null));
 }();
 /******/ })()
 ;
-//# sourceMappingURL=index.c64e84ef.js.map
+//# sourceMappingURL=index.23d069e8.js.map
